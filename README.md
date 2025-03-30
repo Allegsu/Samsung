@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://github.com/Allegsu/Chemistry">
-        <img src="./public/media/images/preview.png" alt="Logo" width="380">
+        <img src="./public/media/images/preview.png" alt="Logo" width="990">
     </a>
 </div>
 
