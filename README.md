@@ -34,6 +34,10 @@ This dataset provides the volumes of waste across South Korean cities, recorded 
     </ul>
 </div>
 
+## AI Website Details
+<div align="justify" display="inline-block">
+<a href="https://allegsu.github.io/Samsung/"><img src="./public/media/images/ai_w.png" alt="goto" width="40"></img><span style="color:white; margin-left: 10px;">AI details: Click here</span></a>
+
 ## Dataset  
 This project uses the **Korea Environment Corporation dataset** (public & unrestricted).
 <div align="justify">
