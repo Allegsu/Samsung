@@ -157,7 +157,7 @@ video{
     white-space: normal;
 }
 .container-btn span{
-    background-image: linear-gradient(to bottom , #f3ebeb 30%, #e0dada 90%);
+    background-image: linear-gradient(to bottom , #f3ebeb 30%, #c6baba 90%);
     background-clip: text;
     color: transparent;
     text-align: center;
