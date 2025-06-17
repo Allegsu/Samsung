@@ -4,9 +4,7 @@
     <img src="./images/preview.png" alt="db-icon" title="icon" align="center" width="800" />
 </a>
 
-<br>
-
-This dataset provides the volumes of waste across South Korean cities, recorded by the Korea Environment Corporation. It includes data on the amount of waste per city, categorized by corporation.
+<br>This dataset provides the volumes of waste across South Korean cities, recorded by the Korea Environment Corporation. It includes data on the amount of waste per city, categorized by corporation.
 
 <a>
     <img src="./images/blueprint.png" alt="app" title="icon" align="right" width="50" />
