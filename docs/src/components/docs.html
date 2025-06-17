@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documents</title>
+    <link rel="stylesheet" href="../webpage/css/menu.css" />
+    <link rel="icon" type="image/png" href="./media/images/favicon.png" sizes="32x32">
+  </head>
+  <body>
+<nav>
+      <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="#"><img src="../webpage/media/images/close_wb.png"h></img></a></li>
+      <li><a href="../webpage/project.html">Overview</a></li>
+      <li><a href="../webpage/docs.html">Documents</a></li>
+      <li><a href="../webpage/about.html">About Us</a></li>
+    </ul>
+    <ul>
+      <li><a href="../index.html">Logo</a></li>
+      <li class="hideOnMobile"><a href="../webpage/project.html">Overview</a></li>
+      <li class="hideOnMobile"><a href="../webpage/docs.html">Documents</a></li>
+      <li class="hideOnMobile"><a href="../webpage/about.html">About Us</a></li>
+      <li class="menu-button" onclick="showSidebar()"><a href="#"><img src="../webpage/media/images/white_dots.png"></img></a></li>
+    </ul>
+  </nav>
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'flex';
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'none';
+    }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../webpage/css/menu.css">
+    <link rel="icon" type="image/png" href="./media/images/favicon.png" sizes="32x32">
+    <title>Team</title>
+</head>
+<body>
+  <nav>
+      <ul class="sidebar">
+      <li onclick="hideSidebar()"><a href="#"><img src="../webpage/media/images/close_wb.png"h></img></a></li>
+      <li><a href="../webpage/project.html">Overview</a></li>
+      <li><a href="../webpage/docs.html">Documents</a></li>
+      <li><a href="../webpage/about.html">About Us</a></li>
+    </ul>
+    <ul>
+      <li><a href="../index.html"><img src="../webpage/media/images/favicon.png"></img></a></li>
+      <li class="hideOnMobile"><a href="../webpage/project.html">Overview</a></li>
+      <li class="hideOnMobile"><a href="../webpage/docs.html">Documents</a></li>
+      <li class="hideOnMobile"><a href="../webpage/about.html">About Us</a></li>
+      <li class="menu-button" onclick="showSidebar()"><a href="#"><img src="../webpage/media/images/white_dots.png"></img></a></li>
+    </ul>
+  </nav>
+  <div class="hero">
+        <h2>Our Team</h2>
+        <div class="team-grid" id="teamGrid">
+        </div>
+        <div class="large-image-container">
+            <img id="largeImage" src="" alt="Large Team Member" class="large-image">
+        </div>
+    </div>
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'flex';
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display = 'none';
+    }
+
+    const teamGrid = document.getElementById('teamGrid');
+        const largeImage = document.getElementById('largeImage');
+
+        const teamImages = [
+            { small: '../webpage/media/images/jeon.png', large: '../webpage/media/images/jeon.png' },
+            { small: '../webpage/media/images/alvaro.jpg', large: '../webpage/media/images/alvaro.jpg' },
+        ];
+
+        function populateTeamGrid() {
+            teamImages.forEach(member => {
+                const img = document.createElement('img');
+                img.src = member.small;
+                img.alt = 'Team Member';
+                img.classList.add('team-member');
+                img.dataset.large = member.large; 
+                img.addEventListener('click', handleMemberClick); 
+                teamGrid.appendChild(img);
+            });
+        }
+
+        // Function to handle clicks on team member images
+        function handleMemberClick(event) {
+            const largeSrc = event.target.dataset.large; 
+            largeImage.src = largeSrc; 
+            largeImage.style.display = 'block'; 
+        }
+
+        populateTeamGrid();
+
+  </script>
+</body>
+</html>
