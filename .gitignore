@@ -1,1 +1,8 @@
 .DS_Store
+data/raw/KR_Medical_Waste.csv
+data/raw/aggregate_trash.csv
+notebooks/AI.ipynb
+notebooks/KR_AI.ipynb
+notebooks/KR_AI_SM.ipynb
+notebooks/KR_Cluster.ipynb
+notebooks/KR_Cluster_F.ipynb
