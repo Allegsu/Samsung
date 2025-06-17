@@ -22,25 +22,19 @@
 /* Fonts */
 @font-face{
     font-family: 'Black Han Sans';
-    src: url('../media/fonts/BlackHanSans-Regular.ttf') format('truetype');
+    src: url('../fonts/BlackHanSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Grandiflora One';
-    src: url(../media/fonts/GrandifloraOne-Regular.ttf) format('truetype');
+    src: url(../fonts/GrandifloraOne-Regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Nanum Gothic';
-    src: url('../media/font/NanumGothic-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Un Dotum';
-    src: url('../media/fonts/2593-UnDotum.ttf') format('truetype');
+    src: url('../fonts/NanumGothic-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -70,15 +64,6 @@
     left: 18%;
     top: 3%;
 }
-.DotumHeader{
-    font-family: 'Un Dotum';
-    font-size: 2rem;
-    position: absolute;
-    color: white;
-    text-shadow: 0 4px 40px rgb(8, 0, 0.8);
-    left: 18%;
-    top: 3%;
-}
 .HangulStylish:hover{
     animation: textBrighten 0.3s forwards;
 }
@@ -92,12 +77,16 @@
     textBrighten 0.3s forwards,
     pulseZoom 1s infinite alternate;
 }
-body {
+html{
     margin: 0;
     padding: 0;
-    margin: 0;
-    height: 80vh;
-    overflow: hidden;
+    height: 100%;
+}
+body {
+    height: auto;
+    height: 100vh;
+    overflow-x: hidden;
+    justify-content: center;
 }
 video{
     width: 100vw;
@@ -133,40 +122,63 @@ video{
 }
 /* Container */
 .container{
-    padding: 48px 16px;
+    padding: 48px 48px;
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
 }
+.container-banner{
+    padding: 12px;
+}
 .container-buttons{
-    margin-top: 2.2rem;
+    width: 100%;
+    max-width: 300px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
     gap: 0.75rem;
 }
 .container-btn{
-    width: 170px;
+    width: 100%;
+    aspect-ratio: 16/2;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
     height: auto;
-    border: none;
-    border-radius: 10px;
-    /*background: transparent;*/
-    background: rgba(0, 0, 0, 0.5);
-    color: #ece6e6;
-    font-size: 1.8rem;
+    padding: 8px 8px;
+    border: 1px solid #adad0c;
+    background: transparent;
+    color: #060000;
+    font-size: 1.2rem;
+    text-align: center;
+    white-space: normal;
+}
+.container-btn span{
+    background-image: linear-gradient(to bottom , #f3ebeb 30%, #e0dada 90%);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+/*Hero Section*/
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.hero-section h1{
+    background-image: linear-gradient(to bottom , #060000 30%, #e1e106 90%);
+    background-clip: text;
+    color: transparent;
+}
+.hero-container{
+    padding: 10px;
 }
 /*Footer*/
 .footer{
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
     padding: 18px;
 }
 .footer-wrapper{
@@ -205,7 +217,7 @@ a{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(8, 7, 6, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 0;
     backdrop-filter: contrast(1.1)
     blur(0.15rem);
