@@ -5,55 +5,22 @@
         color: rgb(255,255,255);
     }
 }
-@keyframes textBrightenII {
-    0%{
-        text-shadow: none;
-        color: rgb(87, 93, 99); 
-    }
-    100%{
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-        color: rgb(58, 61, 63);
-    }
-}
 @keyframes pulseZoom {
     from { transform: scale(1); }
     to { transform: scale(1.1); }
 }
 /* Fonts */
 @font-face {
-    font-family: 'Grandiflora One';
+    font-family: 'Grandiflora-One';
     src: url(../fonts/GrandifloraOne-Regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Nanum Gothic';
+    font-family: 'Nanum-Gothic';
     src: url('../fonts/NanumGothic-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-.HangulStylish{
-    font-family: 'Grandiflora One', sans-serif;
-    font-size: 2.8rem;
-    animation: textBrighten 4s infinite alternate;
-    position: absolute;
-    color: rgb(81, 188, 0);
-    text-shadow: 0 0 10px rgb(8, 0, 0);
-    left: 18%;
-    top: 3%;
-}
-.HangulStylish:hover{
-    animation: textBrighten 0.3s forwards;
-}
-.HangulStylishII{
-    font-family: 'Grandiflora One', sans-serif;
-    font-size: 2.6rem;
-    display: inline-block;
-}
-.HangulStylishII:hover{ 
-    animation: 
-    textBrighten 0.3s forwards,
-    pulseZoom 1s infinite alternate;
 }
 html{
     margin: 0;
@@ -134,7 +101,13 @@ video{
     color: #060000;
     text-align: center;
 }
+.container-buttons button:hover{
+    animation:
+    textBrighten 0.3 forwards,
+    pulseZoom 0.8s infinite alternate;
+}
 .container-buttons button span{
+    font-family: 'Grandiflora-One';
     background-image: linear-gradient(to bottom , #f3ebeb 30%, #c6baba 90%);
     background-clip: text;
     color: transparent;
@@ -147,6 +120,7 @@ video{
     color: white;
 }
 .hero-section h1{
+    font-family: 'Nanum-Gothic';
     background-image: linear-gradient(to bottom , #060000 30%, #e1e106 90%);
     background-clip: text;
     color: transparent;

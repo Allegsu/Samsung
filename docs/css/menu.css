@@ -1,25 +1,63 @@
 /* Importing Google font - Open Sans */
 @font-face {
-    font-family: 'Grandiflora One';
-    src: url(../media/fonts/GrandifloraOne-Regular.ttf) format('truetype');
+    font-family: 'Grandiflora-One';
+    src: url(../fonts/GrandifloraOne-Regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 * {
   margin: 0;
   padding: 0;
-  font-family: "Grandiflora One", sans-serif;
+  font-family: "Grandiflora-One", sans-serif;
 }
 body {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #04012e 23%, #360101 95%);
+  background-image: linear-gradient(to bottom , #060000 30%, #e1e106 90%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.nav {
-  background-color: #04012e;
-  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+/*Background*/
+.background-container{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+.background-container::after{
+  content: "";
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+  backdrop-filter: contrast(1.1);
+}
+/*Video | Image*/
+.background-container img{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    min-height: 100%;
+    filter: blur(2px)
+}
+nav {
+  background: transparent;
+  border: 1px solid #e9e1e1;
+  border-radius: 20px;
+  box-shadow: 20px 5px 25px rgba(219, 219, 7, 0.8);
 }
 nav ul {
   width: 100%;
