@@ -1,4 +1,10 @@
-/* Importing Google font - Open Sans */
+/*keyframes*/
+@keyframes textBrighten {
+  to {
+    color: gold;
+    text-shadow: 0 0 5px;
+  }
+}
 @font-face {
     font-family: 'Grandiflora-One';
     src: url(../fonts/GrandifloraOne-Regular.ttf) format('truetype');
@@ -54,7 +60,7 @@ body {
     filter: blur(2px)
 }
 nav {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.6);
   border: 1px solid #e9e1e1;
   border-radius: 20px;
   box-shadow: 20px 5px 25px rgba(219, 219, 7, 0.8);
@@ -69,6 +75,13 @@ nav ul {
 nav li {
   height: 60px;
 }
+nav ul:nth-of-type(2) li:not(:first-child) a:hover{
+    animation: textBrighten 0.3s forwards;
+}
+nav ul:nth-of-type(2) li:first-child img {
+  width: 30px;
+  filter: drop-shadow(0 0 8px rgba(255,219, 7, 0.8));
+}
 nav a{
   height: 100%;
   padding: 0 30px;
@@ -76,9 +89,6 @@ nav a{
   display: flex;
   align-items: center;
   color: white;
-}
-nav a:hover{
-  background-color: gold;
 }
 nav li:first-child{
   margin-right: auto;
@@ -90,7 +100,7 @@ nav li:first-child{
   height: 100vh;
   width: 250px;
   z-index: 999;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(16, 0, 0, 0.5);
   backdrop-filter: blur(15px);
   box-shadow: -10px 0 10px rgba(0,0,0,0.1);
   display: none;
