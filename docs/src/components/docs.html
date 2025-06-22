@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="../../images/favicon.png" sizes="32x32">
   </head>
   <body>
+<div class="page-wrapper"> 
     <div class="background-container">
         <img src="../../images/kr.jpg" />
     </div>
@@ -16,7 +17,7 @@
       <li onclick="hideSidebar()"><a href="#"><img src="../../images/close_wb.png"h></img></a></li>
       <li><a href="">Overview</a></li>
       <li><a href="../components/docs.html">Documents</a></li>
-      <li><a href="">About Us</a></li>
+      <li><a href="../components/about.html">About Us</a></li>
     </ul>
     <ul>
       <li><a href="../../index.html">
@@ -24,12 +25,63 @@
       </a></li>
       <li class="hideOnMobile"><a href="">Overview</a></li>
       <li class="hideOnMobile"><a href="../components/docs.html">Documents</a></li>
-      <li class="hideOnMobile"><a href="">About Us</a></li>
+      <li class="hideOnMobile"><a href="../components/about.html">About Us</a></li>
       <li class="menu-button" onclick="showSidebar()"><a href="#"><img src="../../images/white_dots.png"></img></a></li>
     </ul>
   </nav>
-    <div class="main"></div>
-    <div class="footer"></div>
+<main>
+  <div class="main-container">
+    <div class="main-A">
+        <h1>How to use our AI model</h1>
+        <img src="../../images/docs.png" />
+    </div>
+    <div class="main-B">
+       <div class="main-B1">
+        <div class="main-B2">
+          <a href="../../assets/AI_Clustering_Model.pdf" target="_blank">Documentation</a>
+          <a href="https:/github.com/Allegsu">Go to GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-container">
+    <div class="table-wrapper">
+        <table class="items-table">
+            <thead>
+                <tr>
+                    <th>Information</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Contact Information</td>
+                    <td>Business Office</td>
+                </tr>
+                <tr>
+                    <td>Business Office</td>
+                    <td>Seoul-South Korea | Seville - Spain</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>corp@kakao.com</td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>+82 10 5664 2332</td>
+                </tr>
+                <tr>
+                    <td>Contact Page</td>
+                    <td>github.com/allegsu</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+</footer>
+</div>
   <script>
     function showSidebar(){
       const sidebar = document.querySelector('.sidebar');
@@ -40,5 +92,6 @@
       sidebar.style.display = 'none';
     }
   </script>
+ 
   </body>
 </html>
