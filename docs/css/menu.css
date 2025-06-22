@@ -5,6 +5,10 @@
     text-shadow: 0 0 5px;
   }
 }
+@keyframes pulseZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
 @font-face {
     font-family: 'Grandiflora-One';
     src: url(../fonts/GrandifloraOne-Regular.ttf) format('truetype');
@@ -16,12 +20,10 @@
   padding: 0;
   font-family: "Grandiflora-One", sans-serif;
 }
-body {
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom , #060000 30%, #e1e106 90%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.page-wrapper{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
 }
 /*Background*/
 .background-container{
@@ -161,6 +163,88 @@ nav img{
   max-height: 80%;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+.main-container{
+  display: flex;
+  padding: 20px 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main-A,
+.main-B{
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.main-A h1{
+  background: linear-gradient(to left, #e1da08, 45%, #a29b9b 90%);
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 30px;
+}
+.main img {
+  width: 40px;
+  height: 40px;
+}
+.main-B2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.main-B2 a{
+  width: 100%;
+  min-width: 250px;
+  max-width: 350px;
+  padding: 12px 12px;
+  width: 200px;
+  font-size: 1.4rem;
+  background: transparent;
+  color: white;
+  border: 1px solid gold;
+  border-radius: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+.main-B2 a:hover{
+  animation: pulseZoom 0.8s infinite alternate;
+}
+footer{
+  background-color: #000;
+  color: #fff;
+}
+.footer-container{
+  margin: 18px 18px;
+}
+.table-wrapper{
+  padding: 10px 10px;
+}
+.items-table{
+    width: 100%;
+    margin: 0;
+    font-size: 0.8em;
+    text-align: left;
+    position: relative;
+    background-color: transparent;
+}
+.items-table thead{
+    font-size: 0.9rem;
+    color: #fff;
+    background: linear-gradient(to right , #2f0101 25%, #000 95%);
+}
+.items-table th, .items-table td{
+  border-radius: 20px;
+  padding: 4px;
 }
 @media (max-width: 600px){
   .hero{
