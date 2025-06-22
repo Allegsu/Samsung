@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../webpage/css/menu.css">
-    <link rel="icon" type="image/png" href="./media/images/favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="icon" type="image/png" href="../../images/favicon.png" sizes="32x32">
     <title>Team</title>
 </head>
 <body>
+<div class="page-wrapper">
+  <div class="background-container"><img src="../../images/m-es.jpg" /></div>
   <nav>
       <ul class="sidebar">
-      <li onclick="hideSidebar()"><a href="#"><img src="../webpage/media/images/close_wb.png"h></img></a></li>
-      <li><a href="../webpage/project.html">Overview</a></li>
-      <li><a href="../webpage/docs.html">Documents</a></li>
-      <li><a href="../webpage/about.html">About Us</a></li>
+      <li onclick="hideSidebar()"><a href="#"><img src="../../images/close_wb.png"h></img></a></li>
+      <li><a href="">Overview</a></li>
+      <li><a href="../components/docs.html">Documents</a></li>
+      <li><a href="../components/about.html">About Us</a></li>
     </ul>
     <ul>
-      <li><a href="../index.html"><img src="../webpage/media/images/favicon.png"></img></a></li>
-      <li class="hideOnMobile"><a href="../webpage/project.html">Overview</a></li>
-      <li class="hideOnMobile"><a href="../webpage/docs.html">Documents</a></li>
-      <li class="hideOnMobile"><a href="../webpage/about.html">About Us</a></li>
-      <li class="menu-button" onclick="showSidebar()"><a href="#"><img src="../webpage/media/images/white_dots.png"></img></a></li>
+      <li><a href="../../index.html"><img src="../../images/favicon.png"></img></a></li>
+      <li class="hideOnMobile"><a href="">Overview</a></li>
+      <li class="hideOnMobile"><a href="../components/docs.html">Documents</a></li>
+      <li class="hideOnMobile"><a href="../components/about.html">About Us</a></li>
+      <li class="menu-button" onclick="showSidebar()"><a href="#"><img src="../../images/white_dots.png"></img></a></li>
     </ul>
   </nav>
   <div class="hero">
@@ -31,6 +33,7 @@
             <img id="largeImage" src="" alt="Large Team Member" class="large-image">
         </div>
     </div>
+</div>
   <script>
     function showSidebar(){
       const sidebar = document.querySelector('.sidebar');
