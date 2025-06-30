@@ -50,6 +50,23 @@
     object-fit: cover;
     filter: blur(2px)
 }
+.background-container-II{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.background-container-II::after{
+  content: "";
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  backdrop-filter: contrast(1.1);
+}
 nav {
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid #e9e1e1;
@@ -120,6 +137,11 @@ nav img{
   padding: 20px;
   gap:20px
 }
+.hero h2{
+  background: linear-gradient(60deg, #fff700, 45%, #d90000 90%);
+  background-clip: text;
+  color: transparent;
+}
 .team-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -127,13 +149,13 @@ nav img{
   width: 300px;
   height: 300px;
   overflow: auto;
-  border: 1px solid #ccc;
+  border: none;
   padding: 5px;
 }
 .team-member{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 5px;
   transition: transform 0.3s ease;
 }
