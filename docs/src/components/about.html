@@ -13,26 +13,25 @@
   <nav>
       <ul class="sidebar">
       <li onclick="hideSidebar()"><a href="#"><img src="../../images/close_wb.png"h></img></a></li>
-      <li><a href="">Overview</a></li>
+      <li><a href="../components/project.html">Overview</a></li>
       <li><a href="../components/docs.html">Documents</a></li>
       <li><a href="../components/about.html">About Us</a></li>
     </ul>
     <ul>
       <li><a href="../../index.html"><img src="../../images/favicon.png"></img></a></li>
-      <li class="hideOnMobile"><a href="">Overview</a></li>
+      <li class="hideOnMobile"><a href="../components/project.html">Overview</a></li>
       <li class="hideOnMobile"><a href="../components/docs.html">Documents</a></li>
       <li class="hideOnMobile"><a href="../components/about.html">About Us</a></li>
       <li class="menu-button" onclick="showSidebar()"><a href="#"><img src="../../images/white_dots.png"></img></a></li>
     </ul>
   </nav>
   <div class="hero">
-        <h2>Our Team</h2>
-        <div class="team-grid" id="teamGrid">
-        </div>
+    <h2>Team Members</h2>
+      <div class="team-grid" id="teamGrid"></div>
         <div class="large-image-container">
-            <img id="largeImage" src="" alt="Large Team Member" class="large-image">
+          <img id="largeImage" src="" alt="Large Team Member" class="large-image">
         </div>
-    </div>
+  </div>
 </div>
   <script>
     function showSidebar(){
@@ -48,8 +47,8 @@
         const largeImage = document.getElementById('largeImage');
 
         const teamImages = [
-            { small: '../webpage/media/images/jeon.png', large: '../webpage/media/images/jeon.png' },
-            { small: '../webpage/media/images/alvaro.jpg', large: '../webpage/media/images/alvaro.jpg' },
+            { small: '../../images/code.png', large: '../../images/spain-s.png' },
+            { small: '../../images/stats.png', large: '../../images/kr-w.png' },
         ];
 
         function populateTeamGrid() {
