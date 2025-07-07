@@ -234,6 +234,7 @@ main{
 footer{
   background-color: #000;
   color: #fff;
+  box-shadow: 20px 5px 25px rgba(219, 219, 7, 0.8);
 }
 .footer-container{
   margin: 18px 18px;
@@ -252,7 +253,6 @@ footer{
 .items-table thead{
     font-size: 0.9rem;
     color: #fff;
-    background: linear-gradient(to right , #2f0101 25%, #000 95%);
 }
 .items-table th, .items-table td{
   border-radius: 20px;
@@ -270,6 +270,60 @@ footer{
     width: 100%;
   }
 }
+/*Project CSS Section*/
+.main-P{
+  display: flex;
+  flex-direction: column;
+  white-space: normal;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.main-P-header {
+  padding: 30px 30px;
+}
+.main-P-header h1{
+  background: linear-gradient(to left, #e1da08, 45%, #a29b9b 95%);
+  background-clip: text;
+  color: transparent;
+}
+.main-P-content{
+  padding: 30px 30px;
+}
+.main-P-content img {
+  width: 900px;
+}
+.footer-P{
+  background-color: #080808;
+  color: #ccc;
+  border: 1px solid #e9e1e1;
+  box-shadow: 20px 5px 25px rgba(219, 219, 7, 0.8);
+  border-radius: 20px;
+}
+.footer-container-P{
+  margin: 18px 18px;
+}
+.table-wrapper-P{
+  padding: 10px 10px;
+}
+.items-table-P{
+    width: 100%;
+    margin: 0;
+    font-size: 0.8em;
+    text-align: left;
+    position: relative;
+    background-color: transparent;
+}
+.items-table-P thead{
+    font-size: 0.9rem;
+    color: #fff;
+    background: transparent;
+}
+.items-table-P th, .items-table-P td{
+  padding: 4px;
+}
 @media(max-width: 800px){
   .hideOnMobile{
     display: none;
@@ -280,6 +334,9 @@ footer{
 }
 @media(max-width: 650px){
   .main-container{
+    flex-direction: column;
+  }
+  .main-P{
     flex-direction: column;
   }
 }
