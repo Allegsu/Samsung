@@ -292,8 +292,29 @@ footer{
 .main-P-content{
   padding: 30px 30px;
 }
-.main-P-content img {
-  width: 900px;
+.carrousel{
+  width: 100%;
+  max-width: 100%;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  display: flex;
+}
+.carrousel img{
+  width: 100%;
+  height: auto;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+.carrousel::-webkit-scrollbar {
+  height: 5px;
+}
+.carrousel::-webkit-scrollbar-track{
+  background: rgba(228, 202, 3, 0.2);
+  border-radius: 10px;
+}
+.carrousel::-webkit-scrollbar-thumb{
+  background-color: #ccc;
+  border-radius: 10px;
 }
 .footer-P{
   background-color: #080808;
