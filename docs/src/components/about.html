@@ -30,6 +30,7 @@
       <div class="team-grid" id="teamGrid"></div>
         <div class="large-image-container">
           <img id="largeImage" src="" alt="Large Team Member" class="large-image">
+           <div id="imageTitle" class="image-title"></div>
         </div>
   </div>
 </div>
@@ -44,33 +45,38 @@
     }
 
     const teamGrid = document.getElementById('teamGrid');
-        const largeImage = document.getElementById('largeImage');
+    const largeImage = document.getElementById('largeImage');
+    const imageTitle = document.getElementById('imageTitle');
 
-        const teamImages = [
-            { small: '../../images/code.png', large: '../../images/spain-s.png' },
-            { small: '../../images/stats.png', large: '../../images/kr-w.png' },
-        ];
+    const teamImages = [
+      { small: '../../images/code.png', large: '../../images/spain-s.png', title: 'Alex - Developer' },
+      { small: '../../images/stats.png', large: '../../images/kr-w.png', title: '아람 / Aram - Data Analyst' },
+    ];
 
-        function populateTeamGrid() {
-            teamImages.forEach(member => {
-                const img = document.createElement('img');
-                img.src = member.small;
-                img.alt = 'Team Member';
-                img.classList.add('team-member');
-                img.dataset.large = member.large; 
-                img.addEventListener('click', handleMemberClick); 
-                teamGrid.appendChild(img);
-            });
-        }
+    function populateTeamGrid() {
+      teamImages.forEach(member => {
+        const img = document.createElement('img');
+        img.src = member.small;
+        img.alt = member.title; 
+        img.classList.add('team-member');
+        img.dataset.large = member.large;
+        img.dataset.title = member.title; 
+        img.addEventListener('click', handleMemberClick);
+        teamGrid.appendChild(img);
+      });
+    }
 
         // Function to handle clicks on team member images
-        function handleMemberClick(event) {
-            const largeSrc = event.target.dataset.large; 
-            largeImage.src = largeSrc; 
-            largeImage.style.display = 'block'; 
-        }
+    function handleMemberClick(event) {
+      const largeSrc = event.target.dataset.large;
+      const title = event.target.dataset.title; 
+      largeImage.src = largeSrc;
+      largeImage.style.display = 'block';
+      imageTitle.textContent = title; 
+      imageTitle.style.display = 'block';
+    }
 
-        populateTeamGrid();
+    populateTeamGrid();
 
   </script>
 </body>
